@@ -509,7 +509,10 @@ runs:
     
         # Output for later steps (optional)
         echo "zip_name=$ZIP_NAME" >> "$GITHUB_OUTPUT"
-    
+    - name: Debug
+      shell: bash
+      run: |
+        cat ./$KERNEL_PATH/common/security/selinux/hooks.c
     - name: Final Build Summary
       shell: bash
       run: |
